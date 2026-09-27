@@ -2,255 +2,318 @@
 <html lang="en" dir="ltr" data-lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>MDops — Intelligent Healthcare Operations</title>
 <meta name="description" content="MDops is an enterprise healthcare operations platform that lets hospitals manage workforce scheduling, perioperative operations, analytics, approvals, and communication from one secure system.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
-<header class="nav-wrap" id="top">
-  <nav class="nav container">
-    <a href="#top" class="logo" aria-label="MDops home">
-      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="4"  y="18" width="6" height="10" rx="2" fill="#22D3EE"/>
-        <rect x="13" y="11" width="6" height="17" rx="2" fill="#2563EB"/>
-        <rect x="22" y="4"  width="6" height="24" rx="2" fill="#10B981"/>
+<a class="skip" href="#main"><span class="en">Skip to content</span><span class="ar">انتقل إلى المحتوى</span></a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="top">
+  <div class="wrap nav-row">
+    <a href="#top" class="brand" aria-label="MDops">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="4" y="18" width="6" height="10" rx="1.5" fill="#22D3EE"/>
+        <rect x="13" y="11" width="6" height="17" rx="1.5" fill="#2563EB"/>
+        <rect x="22" y="4" width="6" height="24" rx="1.5" fill="#10B981"/>
       </svg>
-      <span class="logo-word">MD<span class="logo-o">o</span>ps</span>
+      <span class="wordmark">MD<span class="pulse-o">o</span>ps</span>
     </a>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#story"><span class="en">Story</span><span class="ar">القصّة</span></a>
+      <a href="#platform"><span class="en">Platform</span><span class="ar">المنصّة</span></a>
+      <a href="#security"><span class="en">Security</span><span class="ar">الأمان</span></a>
+      <a href="#approach"><span class="en">Approach</span><span class="ar">المنهجية</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="ar">تواصل</span></a>
+    </nav>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about"><span class="en">About</span><span class="ar">من نحن</span></a></li>
-      <li><a href="#products"><span class="en">Products</span><span class="ar">المنتجات</span></a></li>
-      <li><a href="#why"><span class="en">Why MDops</span><span class="ar">لماذا إم دي أوبس</span></a></li>
-      <li><a href="#platform"><span class="en">Platform &amp; Security</span><span class="ar">المنصّة والأمان</span></a></li>
-      <li><a href="#contact" class="nav-cta"><span class="en">Contact Us</span><span class="ar">تواصل معنا</span></a></li>
-      <li>
-        <button class="lang-btn" id="langToggle" aria-label="Switch language">
-          <span class="en">العربية</span><span class="ar">English</span>
-        </button>
-      </li>
-    </ul>
-  </nav>
+    <div class="nav-tools">
+      <span class="clock" title="Riyadh time"><span class="live-dot" aria-hidden="true"></span><span class="en">RUH</span><span class="ar">الرياض</span> <span id="ruhClock" class="tnum">--:--:--</span></span>
+      <button class="lang" id="langToggle" type="button" aria-label="Switch language / تغيير اللغة">
+        <span class="en">عربي</span><span class="ar">EN</span>
+      </button>
+      <a href="#contact" class="btn btn-ink nav-cta"><span class="en">Request a demo</span><span class="ar">اطلب عرضًا</span></a>
+      <button class="burger" id="navToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </div>
 </header>
 
-<!-- ============ HERO ============ -->
+<main id="main">
+
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="en">MDops · Enterprise HealthTech</span><span class="ar">إم دي أوبس · تقنية صحية للمؤسسات</span></p>
-      <h1>
-        <span class="en">Intelligent Healthcare Operations</span>
-        <span class="ar">عمليات رعاية صحية ذكية</span>
+      <p class="eyebrow"><span class="en">Intelligent Healthcare Operations</span><span class="ar">عمليات رعاية صحية ذكية</span></p>
+      <h1 class="hero-title">
+        <span class="h1-soft"><span class="en">Less time on administration.</span><span class="ar">وقت أقل في الإدارة،</span></span>
+        <span class="h1-strong"><span class="en">More time for patients.</span><span class="ar">ووقت أكثر للمرضى.</span></span>
       </h1>
       <p class="hero-sub">
-        <span class="en">MDops is an enterprise healthcare operations platform that lets hospitals manage workforce scheduling, perioperative operations, analytics, approvals, and communication — from one secure system.</span>
-        <span class="ar">إم دي أوبس منصّة مؤسسية لعمليات الرعاية الصحية تُمكّن المستشفيات من إدارة جدولة الكوادر، وعمليات غرف العمليات، والتحليلات، والاعتمادات، والتواصل — من نظام واحد آمن.</span>
-      </p>
-      <p class="hero-promise">
-        <span class="en">Less time on administration. More time for patients.</span>
-        <span class="ar">وقت أقل في الإدارة، ووقت أكثر للمرضى.</span>
+        <span class="en">MDops is an enterprise healthcare operations platform. Hospitals manage workforce scheduling, perioperative operations, analytics, approvals, and communication from one secure system.</span>
+        <span class="ar">إم دي أوبس منصّة مؤسسية لعمليات الرعاية الصحية تُمكّن المستشفيات من إدارة جدولة الكوادر، وعمليات غرف العمليات، والتحليلات، والاعتمادات، والتواصل من نظام واحد آمن.</span>
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary"><span class="en">Request a Demo</span><span class="ar">اطلب عرضًا تجريبيًا</span></a>
-        <a href="#products" class="btn btn-ghost"><span class="en">Explore the Platform</span><span class="ar">استكشف المنصّة</span></a>
+        <a href="#contact" class="btn btn-ink"><span class="en">Request a demo</span><span class="ar">اطلب عرضًا تجريبيًا</span></a>
+        <a href="#platform" class="link-arrow"><span class="en">Explore the platform</span><span class="ar">استكشف المنصّة</span> <span class="arrow" aria-hidden="true">→</span></a>
       </div>
+      <ul class="hero-meta">
+        <li><span class="en">Riyadh, KSA</span><span class="ar">الرياض، السعودية</span></li>
+        <li><span class="en">Web &amp; mobile</span><span class="ar">ويب وجوال</span></li>
+        <li>English / العربية</li>
+      </ul>
     </div>
 
-    <div class="hero-card">
-      <div class="stat">
-        <span class="stat-num">7</span>
-        <span class="stat-label"><span class="en">Connected products, one platform</span><span class="ar">منتجات مترابطة على منصّة واحدة</span></span>
+    <!-- Live OR board -->
+    <figure class="board" aria-label="Example OR board">
+      <div class="board-head">
+        <div>
+          <p class="board-title"><span class="en">OR board</span><span class="ar">لوحة غرف العمليات</span></p>
+          <p class="board-sub"><span class="en">Anaesthesia · example department</span><span class="ar">التخدير · قسم توضيحي</span></p>
+        </div>
+        <span class="status" id="boardStatus" data-state="published">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="st-published"><span class="en">Published</span><span class="ar">منشور</span></span>
+          <span class="st-distributing"><span class="en">Distributing</span><span class="ar">جارٍ التوزيع</span></span>
+        </span>
       </div>
-      <div class="stat">
-        <span class="stat-num">EN·AR</span>
-        <span class="stat-label"><span class="en">Fully bilingual with RTL support</span><span class="ar">ثنائية اللغة بالكامل مع دعم RTL</span></span>
+      <div class="board-axis" id="boardAxis" aria-hidden="true"></div>
+      <div class="board-rows" id="boardRows"></div>
+      <div class="board-foot">
+        <div class="readout"><span class="ro-label"><span class="en">Rooms</span><span class="ar">الغرف</span></span><span class="ro-val tnum">6</span></div>
+        <div class="readout"><span class="ro-label"><span class="en">Staff placed</span><span class="ar">الكوادر المُسنَدة</span></span><span class="ro-val tnum"><span id="boardPlaced">12</span>/12</span></div>
+        <div class="readout"><span class="ro-label"><span class="en">Conflicts</span><span class="ar">التعارضات</span></span><span class="ro-val ro-ok tnum">0</span></div>
+        <div class="readout"><span class="ro-label"><span class="en">Locked slots</span><span class="ar">فترات مثبّتة</span></span><span class="ro-val tnum">1</span></div>
       </div>
-      <div class="stat">
-        <span class="stat-num">2FA</span>
-        <span class="stat-label"><span class="en">Enterprise security, out of the box</span><span class="ar">أمان مؤسسي جاهز منذ البداية</span></span>
+    </figure>
+  </div>
+
+  <div class="ecg-band" aria-hidden="true">
+    <canvas class="ecg" id="ecgHero"></canvas>
+    <span class="ecg-tag ecg-tag-start">II · 25 mm/s · 10 mm/mV</span>
+    <span class="ecg-tag ecg-tag-end"><span class="live-dot"></span> OPS LIVE</span>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="sec story" id="story">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Our story</span><span class="ar">قصّتنا</span></p>
+    <h2><span class="en">It began at 11 p.m. on a Thursday.</span><span class="ar">بدأ الأمر عند الحادية عشرة مساءً من يوم خميس.</span></h2>
+
+    <div class="story-grid">
+      <div class="story-steps">
+        <article class="step is-active" data-state="manual">
+          <p class="step-time tnum"><span class="en">Thu · 23:00</span><span class="ar">الخميس · 23:00</span></p>
+          <p><span class="en">In a quiet hospital office lit by a single screen, the department's coordinator was doing what they did every week: rebuilding the next month's rota by hand. A wall of names, a grid of days, and a tangle of rules held together by memory. Who was on leave. Who had done three nights in a row. Which resident couldn't cover the women's OR. One wrong cell and someone worked unfairly, or a room opened with no anaesthetist at all.</span><span class="ar">في مكتبٍ هادئ بمستشفى لا يُضيئه سوى شاشة واحدة، كان منسّق القسم يفعل ما يفعله كل أسبوع: يُعيد بناء جدول الشهر القادم يدويًّا. جدارٌ من الأسماء، وشبكةٌ من الأيام، وخيوطٌ متشابكة من القواعد تربطها الذاكرة وحدها. مَن في إجازة؟ مَن أدّى ثلاث ليالٍ متتالية؟ أيّ مقيمٍ لا يستطيع تغطية غرفة عمليات النساء؟ خطأٌ في خانة واحدة، فيعمل أحدهم بلا إنصاف، أو تُفتَح غرفة بلا طبيب تخدير على الإطلاق.</span></p>
+        </article>
+        <article class="step" data-state="noon">
+          <p class="step-time tnum"><span class="en">Fri · 12:00</span><span class="ar">الجمعة · 12:00</span></p>
+          <p><span class="en">By morning the schedule was done. By noon it was already wrong: a sick call, a swapped shift, a cancelled list. And the coordinator started again.</span><span class="ar">بحلول الصباح اكتمل الجدول. وبحلول الظهر صار خاطئًا: اتّصال مرضيّ، ومناوبة مُبادَلة، وقائمة مُلغاة. فيبدأ المنسّق من جديد.</span></p>
+        </article>
+        <article class="step" data-state="noon">
+          <p class="step-time"><span class="en">The question</span><span class="ar">السؤال</span></p>
+          <p><span class="en">We watched this happen in department after department, and asked one simple question: why is the software that runs the operating room so much better than the software that runs the people in it?</span><span class="ar">رأينا هذا يتكرّر في قسمٍ تلو الآخر، فطرحنا سؤالًا واحدًا بسيطًا: لماذا تكون البرمجيات التي تُدير غرفة العمليات أفضل بكثير من تلك التي تُدير الناس داخلها؟</span></p>
+          <p class="step-punch"><span class="en">That question became MDops.</span><span class="ar">من ذلك السؤال وُلدت إم دي أوبس.</span></p>
+        </article>
+        <article class="step" data-state="mdops">
+          <p class="step-time"><span class="en">Day one</span><span class="ar">اليوم الأول</span></p>
+          <p><span class="en">We started with the hardest part: fairly distributing anaesthesia staff across rooms, clinics, and on-call, respecting specialty, training level, leave, and fatigue rules that no spreadsheet could hold. When the first department went live and a full month's rota was generated in seconds instead of a weekend, fair, complete, and explainable, we knew we had something.</span><span class="ar">بدأنا بالجزء الأصعب: توزيع كوادر التخدير بعدالة على الغرف والعيادات والمناوبات، مع مراعاة التخصّص، ومستوى التدريب، والإجازات، وقواعد الإرهاق التي يعجز أيّ جدول يدويّ عن استيعابها. وحين انطلق أول قسم، وتولّد جدول شهرٍ كامل عادلٌ ومكتمل وقابل للتفسير في ثوانٍ بدل عطلة نهاية أسبوع، أدركنا أننا نملك شيئًا مهمًّا.</span></p>
+        </article>
+        <article class="step" data-state="mdops">
+          <p class="step-time"><span class="en">Today</span><span class="ar">اليوم</span></p>
+          <p><span class="en">MDops is now a full operations platform: multi-tenant, secure, and built so every hospital runs in its own isolated environment. The mission hasn't changed since that Thursday night. Give healthcare teams software worthy of their work, so they spend less time on administration and more with patients.</span><span class="ar">اليوم، إم دي أوبس منصّة عمليات متكاملة: متعدّدة المستأجرين، وآمنة، ومبنيّة بحيث يعمل كل مستشفى في بيئته المعزولة. لكن الرسالة لم تتغيّر منذ ليلة الخميس تلك: أن نمنح الفِرق الصحية برمجياتٍ تليق بعملها، لتقضي وقتًا أقل في الإدارة، وأكثر مع المرضى.</span></p>
+        </article>
       </div>
-      <div class="stat">
-        <span class="stat-num">1:1</span>
-        <span class="stat-label"><span class="en">Isolated data environment per hospital</span><span class="ar">بيئة بيانات معزولة لكل مستشفى</span></span>
+
+      <div class="story-visual">
+        <figure class="rota" id="rota" data-state="manual" aria-label="Illustrative anaesthesia rota">
+          <div class="rota-head">
+            <div>
+              <p class="board-title"><span class="en">Anaesthesia rota · week 1</span><span class="ar">جدول التخدير · الأسبوع الأول</span></p>
+              <p class="board-sub"><span class="en">Illustrative example</span><span class="ar">مثال توضيحي</span></p>
+            </div>
+            <div class="rota-state">
+              <span class="rs rs-manual"><span class="en">Built by hand</span><span class="ar">مبنيّ يدويًّا</span></span>
+              <span class="rs rs-noon"><span class="en">Already wrong</span><span class="ar">خاطئ بالفعل</span></span>
+              <span class="rs rs-mdops"><span class="en">Generated by MDops</span><span class="ar">مولَّد بواسطة إم دي أوبس</span></span>
+            </div>
+          </div>
+          <div class="rota-scroll">
+            <div class="rota-grid" id="rotaGrid"></div>
+          </div>
+          <div class="rota-events">
+            <span class="ev"><span class="en">Sick call</span><span class="ar">اتّصال مرضيّ</span></span>
+            <span class="ev"><span class="en">Swapped shift</span><span class="ar">مناوبة مُبادَلة</span></span>
+            <span class="ev"><span class="en">Cancelled list</span><span class="ar">قائمة مُلغاة</span></span>
+          </div>
+          <div class="rota-foot">
+            <div class="readout"><span class="ro-label"><span class="en">Conflicts</span><span class="ar">تعارضات</span></span><span class="ro-val tnum" id="rotaConflicts">4</span></div>
+            <div class="readout"><span class="ro-label"><span class="en">Uncovered</span><span class="ar">غير مغطّاة</span></span><span class="ro-val tnum" id="rotaGaps">3</span></div>
+            <div class="readout"><span class="ro-label"><span class="en">Time spent</span><span class="ar">الوقت المستغرق</span></span><span class="ro-val" id="rotaTime"><span class="t-manual"><span class="en">A weekend</span><span class="ar">عطلة أسبوع</span></span><span class="t-mdops"><span class="en">Seconds</span><span class="ar">ثوانٍ</span></span></span></div>
+          </div>
+          <ul class="rota-legend">
+            <li><i class="c c-OR">OR</i><span class="en">Operating room</span><span class="ar">غرفة عمليات</span></li>
+            <li><i class="c c-CL">CL</i><span class="en">Clinic</span><span class="ar">عيادة</span></li>
+            <li><i class="c c-OC">OC</i><span class="en">On-call</span><span class="ar">مناوبة</span></li>
+            <li><i class="c c-N">N</i><span class="en">Night</span><span class="ar">ليلي</span></li>
+            <li><i class="c c-PC">PC</i><span class="en">Post-call rest</span><span class="ar">راحة ما بعد المناوبة</span></li>
+            <li><i class="c c-L">L</i><span class="en">Leave</span><span class="ar">إجازة</span></li>
+          </ul>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Company Profile</span><span class="ar">نبذة عن الشركة</span></p>
-    <h2><span class="en">Built for hospital operations</span><span class="ar">مبنيّة لعمليات المستشفيات</span></h2>
-    <div class="about-grid">
-      <div>
-        <p class="lead">
-          <span class="en">MDops is a healthcare technology company that builds enterprise software for hospital operations. Our platform unifies workforce scheduling, perioperative management, on-call planning, executive analytics, approvals, and communication into one secure system — replacing the spreadsheets and scattered tools that clinical departments still rely on.</span>
-          <span class="ar">إم دي أوبس شركة تقنية صحية تُطوّر برمجيات مؤسسية لعمليات المستشفيات. توحّد منصّتنا جدولة الكوادر، وإدارة ما حول العمليات، وتخطيط المناوبات، والتحليلات التنفيذية، والاعتمادات، والتواصل في نظام واحد آمن — بديلًا عن الجداول اليدوية والأدوات المتفرّقة التي لا تزال الأقسام السريرية تعتمد عليها.</span>
-        </p>
-        <div class="vm-cards">
-          <div class="vm-card">
-            <h3><span class="en">Vision</span><span class="ar">الرؤية</span></h3>
-            <p><span class="en">To power the operations of every modern hospital.</span><span class="ar">أن نُشغّل العمليات في كل مستشفى حديث.</span></p>
-          </div>
-          <div class="vm-card">
-            <h3><span class="en">Mission</span><span class="ar">الرسالة</span></h3>
-            <p><span class="en">To make healthcare operations effortless — helping hospitals work more efficiently, decide with confidence, and give more of their time back to patients.</span><span class="ar">أن نجعل عمليات الرعاية الصحية سلسة — لتعمل المستشفيات بكفاءة أعلى، وتتّخذ قراراتها بثقة، وتُعيد المزيد من وقتها لخدمة المرضى.</span></p>
+<!-- ================= PLATFORM ================= -->
+<section class="sec dark" id="platform">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">Products &amp; solutions</span><span class="ar">المنتجات والحلول</span></p>
+      <h2><span class="en">One platform. Seven connected products.</span><span class="ar">منصّة واحدة. سبعة منتجات مترابطة.</span></h2>
+      <p class="lead"><span class="en">MDops is not one application. It is a suite of connected products that share one secure platform, so a change in the rota reaches on-call, analytics, and every phone in the department.</span><span class="ar">إم دي أوبس ليست تطبيقًا واحدًا، بل مجموعة منتجات مترابطة على منصّة واحدة آمنة، فيصل أيّ تغيير في الجدول إلى المناوبات والتحليلات وكل هاتف في القسم.</span></p>
+    </div>
+
+    <div class="suite">
+      <div class="suite-list" role="tablist" aria-label="MDops products" id="suiteList"></div>
+      <div class="suite-panel" id="suitePanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="sec" id="why">
+  <div class="wrap why-grid">
+    <div class="why-head">
+      <p class="eyebrow"><span class="en">Why MDops</span><span class="ar">لماذا إم دي أوبس</span></p>
+      <h2><span class="en">Built for healthcare, not adapted to it.</span><span class="ar">مبنيّة للقطاع الصحي، لا مُكيَّفة له.</span></h2>
+    </div>
+    <ul class="why-list">
+      <li>
+        <span class="tag"><span class="en">Clinical rules</span><span class="ar">قواعد سريرية</span></span>
+        <div><h3><span class="en">Built for healthcare</span><span class="ar">مبنيّة للقطاع الصحي</span></h3>
+        <p><span class="en">Specialty, training level, and fatigue rules are first-class concepts.</span><span class="ar">التخصّص ومستوى التدريب وقواعد الإرهاق مفاهيم أساسية.</span></p></div>
+      </li>
+      <li>
+        <span class="tag"><span class="en">Fairness</span><span class="ar">العدالة</span></span>
+        <div><h3><span class="en">Fair by design</span><span class="ar">عادلة بالتصميم</span></h3>
+        <p><span class="en">Workload and on-call are balanced transparently, and leadership can see the fairness.</span><span class="ar">يُوازَن العبء والمناوبات بشفافية، والعدالة ظاهرة للقيادة.</span></p></div>
+      </li>
+      <li>
+        <span class="tag"><span class="en">One system</span><span class="ar">نظام واحد</span></span>
+        <div><h3><span class="en">One source of truth</span><span class="ar">مصدر واحد للحقيقة</span></h3>
+        <p><span class="en">Scheduling, leave, on-call, analytics, and messaging live in one system.</span><span class="ar">الجدولة والإجازات والمناوبات والتحليلات والمراسلات في نظام واحد.</span></p></div>
+      </li>
+      <li>
+        <span class="tag"><span class="en">Isolation</span><span class="ar">العزل</span></span>
+        <div><h3><span class="en">Secure &amp; isolated</span><span class="ar">آمنة ومعزولة</span></h3>
+        <p><span class="en">Each organisation's data is separated at the database level.</span><span class="ar">بيانات كل مؤسسة مفصولة على مستوى قاعدة البيانات.</span></p></div>
+      </li>
+      <li>
+        <span class="tag"><span class="en">Enterprise</span><span class="ar">المؤسسات</span></span>
+        <div><h3><span class="en">Enterprise-ready</span><span class="ar">جاهزة للمؤسسات</span></h3>
+        <p><span class="en">Role-based access, two-factor sign-in, and approvals out of the box.</span><span class="ar">صلاحيات حسب الدور، ودخول بخطوتين، واعتمادات جاهزة.</span></p></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="wrap values">
+    <p class="eyebrow"><span class="en">What we stand for</span><span class="ar">قيمنا</span></p>
+    <dl class="values-grid">
+      <div><dt><span class="en">Innovation</span><span class="ar">الابتكار</span></dt><dd><span class="en">We continuously improve healthcare operations through intelligent technology.</span><span class="ar">نُطوّر عمليات الرعاية الصحية باستمرار عبر التقنية الذكية.</span></dd></div>
+      <div><dt><span class="en">Reliability</span><span class="ar">الموثوقية</span></dt><dd><span class="en">Hospitals depend on us every day; reliability is non-negotiable.</span><span class="ar">تعتمد علينا المستشفيات كل يوم؛ والموثوقية غير قابلة للمساومة.</span></dd></div>
+      <div><dt><span class="en">Security</span><span class="ar">الأمان</span></dt><dd><span class="en">Healthcare data deserves the highest level of protection.</span><span class="ar">تستحقّ بيانات الرعاية الصحية أعلى مستويات الحماية.</span></dd></div>
+      <div><dt><span class="en">Simplicity</span><span class="ar">البساطة</span></dt><dd><span class="en">Complex workflows should feel effortless.</span><span class="ar">ينبغي أن تبدو الإجراءات المعقّدة سهلة وسلسة.</span></dd></div>
+      <div><dt><span class="en">Excellence</span><span class="ar">التميّز</span></dt><dd><span class="en">Every feature should improve the lives of healthcare professionals.</span><span class="ar">كل ميزة يجب أن تُحسّن حياة الكوادر الصحية.</span></dd></div>
+      <div><dt><span class="en">Partnership</span><span class="ar">الشراكة</span></dt><dd><span class="en">We build long-term relationships with healthcare organisations.</span><span class="ar">نبني علاقات طويلة الأمد مع المؤسسات الصحية.</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= WHO WE SERVE ================= -->
+<section class="sec tint" id="serve">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Who we serve</span><span class="ar">مَن نخدم</span></p>
+    <h2><span class="en">The leaders who choose it, and the teams who use it every day.</span><span class="ar">القادة الذين يختارونها، والفِرق التي تستخدمها يوميًّا.</span></h2>
+    <div class="serve-grid">
+      <div class="serve-col">
+        <p class="col-label"><span class="en">Decision-makers</span><span class="ar">صنّاع القرار</span></p>
+        <p><span class="en">Hospital CEOs and Chief Operating Officers seeking efficiency and visibility; Medical Directors and Department Chairs accountable for coverage, fairness, and compliance; and OR and Anaesthesia heads who own the daily schedule.</span><span class="ar">الرؤساء التنفيذيون ومديرو التشغيل الباحثون عن الكفاءة والوضوح؛ والمديرون الطبّيون ورؤساء الأقسام المسؤولون عن التغطية والعدالة والالتزام؛ ورؤساء أقسام غرف العمليات والتخدير الذين يملكون الجدول اليومي.</span></p>
+      </div>
+      <div class="serve-col">
+        <p class="col-label"><span class="en">Daily users</span><span class="ar">المستخدمون اليوميون</span></p>
+        <p><span class="en">Coordinators and schedulers who build and publish the rota; consultants, fellows, residents, and technologists who see their assignments, request leave, and receive alerts; and nursing and perioperative leadership coordinating theatre lists.</span><span class="ar">المنسّقون ومُعِدّو الجداول الذين يبنون الجدول وينشرونه؛ والاستشاريون والزملاء والأطباء المقيمون والفنّيون الذين يطّلعون على تكليفاتهم ويطلبون الإجازات ويتلقّون التنبيهات؛ وقيادات التمريض وما حول العمليات.</span></p>
+      </div>
+      <div class="serve-col">
+        <p class="col-label"><span class="en">Organisations</span><span class="ar">المؤسسات</span></p>
+        <ul class="org-list">
+          <li><span class="en">Private hospitals and hospital groups</span><span class="ar">المستشفيات الخاصة والمجموعات الصحية</span></li>
+          <li><span class="en">Government and public-sector hospitals</span><span class="ar">المستشفيات الحكومية والقطاع العام</span></li>
+          <li><span class="en">Military and security-forces medical services</span><span class="ar">الخدمات الطبية العسكرية وقوى الأمن</span></li>
+          <li><span class="en">Academic and university medical centres</span><span class="ar">المراكز الطبية الأكاديمية والجامعية</span></li>
+          <li><span class="en">Day-surgery and ambulatory centres</span><span class="ar">مراكز جراحة اليوم الواحد والرعاية النهارية</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY ================= -->
+<section class="sec dark" id="security">
+  <div class="wrap sec-grid">
+    <div>
+      <p class="eyebrow"><span class="en">Technology &amp; security</span><span class="ar">التقنية والأمان</span></p>
+      <h2><span class="en">Security is a design principle, not an afterthought.</span><span class="ar">الأمن مبدأ تصميميّ، لا إضافة لاحقة.</span></h2>
+      <p class="lead"><span class="en">MDops is a cloud-native platform delivered as secure multi-tenant software. Every hospital operates inside its own isolated data environment, reached through its own dedicated web address, with full English and Arabic support across web and mobile.</span><span class="ar">إم دي أوبس منصّة حديثة سحابية الأساس تُقدَّم كبرمجيات آمنة متعدّدة المستأجرين. يعمل كل مستشفى داخل بيئة بيانات معزولة خاصّة به، يصل إليها عبر عنوانٍ إلكترونيّ مخصّص، مع دعم كامل للعربية والإنجليزية عبر الويب والجوال.</span></p>
+      <ul class="layers" id="layerList">
+        <li tabindex="0" data-layer="1"><b><span class="en">Encryption in transit</span><span class="ar">التشفير أثناء النقل</span></b><span class="en">with per-organisation file storage.</span><span class="ar">مع تخزين ملفّات لكل مؤسسة على حدة.</span></li>
+        <li tabindex="0" data-layer="2"><b><span class="en">Two-factor authentication</span><span class="ar">المصادقة بخطوتين</span></b><span class="en">password plus a one-time code.</span><span class="ar">كلمة مرور مع رمز لمرة واحدة.</span></li>
+        <li tabindex="0" data-layer="3"><b><span class="en">Session integrity</span><span class="ar">سلامة الجلسات</span></b><span class="en">sessions bound to their organisation, no cross-tenant replay.</span><span class="ar">جلسات مرتبطة بالمؤسسة تمنع إعادة الاستخدام عبر المستأجرين.</span></li>
+        <li tabindex="0" data-layer="4"><b><span class="en">Least-privilege access</span><span class="ar">أقلّ امتياز</span></b><span class="en">role-based control of every action and view.</span><span class="ar">صلاحيات حسب الدور لكل إجراء وشاشة.</span></li>
+        <li tabindex="0" data-layer="5"><b><span class="en">Tenant isolation</span><span class="ar">عزل المستأجرين</span></b><span class="en">data separated at the database level.</span><span class="ar">تُفصَل البيانات على مستوى قاعدة البيانات.</span></li>
+        <li tabindex="0" data-layer="6"><b><span class="en">Data residency</span><span class="ar">موقع البيانات</span></b><span class="en">a dedicated, region-specific database on request.</span><span class="ar">قاعدة بيانات مخصّصة حسب المنطقة عند الطلب.</span></li>
+      </ul>
+    </div>
+
+    <figure class="vault" id="vault" aria-label="Security layers around each hospital's data">
+      <div class="ring" data-ring="1"><span class="ring-label"><span class="en">Encryption in transit</span><span class="ar">التشفير أثناء النقل</span></span>
+        <div class="ring" data-ring="2"><span class="ring-label"><span class="en">Two-factor sign-in</span><span class="ar">الدخول بخطوتين</span></span>
+          <div class="ring" data-ring="3"><span class="ring-label"><span class="en">Organisation-bound session</span><span class="ar">جلسة مرتبطة بالمؤسسة</span></span>
+            <div class="ring" data-ring="4"><span class="ring-label"><span class="en">Role-based access</span><span class="ar">صلاحيات حسب الدور</span></span>
+              <div class="ring" data-ring="5"><span class="ring-label"><span class="en">Tenant isolation</span><span class="ar">عزل المستأجرين</span></span>
+                <div class="core" data-ring="6">
+                  <span class="db" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="core-label"><span class="en">Your hospital's data</span><span class="ar">بيانات مستشفاك</span></span>
+                  <span class="core-sub"><span class="en">Dedicated regional database on request</span><span class="ar">قاعدة بيانات إقليمية مخصّصة عند الطلب</span></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <table class="facts">
-        <tr>
-          <th><span class="en">Category</span><span class="ar">التصنيف</span></th>
-          <td><span class="en">Enterprise Healthcare Operations (HealthTech SaaS)</span><span class="ar">عمليات رعاية صحية مؤسسية (HealthTech SaaS)</span></td>
-        </tr>
-        <tr>
-          <th><span class="en">Focus</span><span class="ar">التركيز</span></th>
-          <td><span class="en">Workforce, perioperative &amp; on-call operations</span><span class="ar">الكوادر، وما حول العمليات، والمناوبات</span></td>
-        </tr>
-        <tr>
-          <th><span class="en">Delivery</span><span class="ar">التقديم</span></th>
-          <td><span class="en">Secure multi-tenant cloud, isolated per organisation</span><span class="ar">سحابة آمنة متعدّدة المستأجرين، معزولة لكل مؤسسة</span></td>
-        </tr>
-        <tr>
-          <th><span class="en">Availability</span><span class="ar">الإتاحة</span></th>
-          <td><span class="en">Web &amp; mobile · bilingual (English / Arabic, RTL)</span><span class="ar">ويب وجوال · ثنائية اللغة (إنجليزي / عربي، RTL)</span></td>
-        </tr>
-        <tr>
-          <th><span class="en">Headquarters</span><span class="ar">المقر الرئيسي</span></th>
-          <td><span class="en">Riyadh, Kingdom of Saudi Arabia</span><span class="ar">الرياض، المملكة العربية السعودية</span></td>
-        </tr>
-      </table>
+      <figcaption class="pdpl"><span class="en">Built to align with healthcare data-protection expectations, including Saudi PDPL and comparable international standards.</span><span class="ar">مصمّمة بما يتوافق مع متطلّبات حماية البيانات الصحية، بما في ذلك نظام حماية البيانات الشخصية السعودي (PDPL) والمعايير الدولية المماثلة.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= APPROACH (journey map) ================= -->
+<section class="sec" id="approach">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="en">Implementation approach</span><span class="ar">منهجية التطبيق</span></p>
+      <h2><span class="en">Clear, low-risk phases.</span><span class="ar">مراحل واضحة ومنخفضة المخاطر.</span></h2>
+      <p class="lead"><span class="en">We onboard hospitals in clear, low-risk phases so value arrives quickly with minimal disruption. Select a phase to see what happens in it.</span><span class="ar">نُدخِل المستشفيات إلى المنصّة عبر مراحل واضحة ومنخفضة المخاطر، ليصل الأثر سريعًا وبأقلّ اضطراب. اختر مرحلة لترى ما يحدث فيها.</span></p>
     </div>
-  </div>
-</section>
 
-<!-- ============ VALUES ============ -->
-<section class="section section-alt" id="values">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Core Values</span><span class="ar">القيم الجوهرية</span></p>
-    <h2><span class="en">What we stand for</span><span class="ar">ما الذي نمثّله</span></h2>
-    <div class="cards-grid cols-3">
-      <div class="card"><h3><span class="en">Innovation</span><span class="ar">الابتكار</span></h3><p><span class="en">We continuously improve healthcare operations through intelligent technology.</span><span class="ar">نُطوّر عمليات الرعاية الصحية باستمرار عبر التقنية الذكية.</span></p></div>
-      <div class="card"><h3><span class="en">Reliability</span><span class="ar">الموثوقية</span></h3><p><span class="en">Hospitals depend on us every day; reliability is non-negotiable.</span><span class="ar">تعتمد علينا المستشفيات كل يوم؛ والموثوقية غير قابلة للمساومة.</span></p></div>
-      <div class="card"><h3><span class="en">Security</span><span class="ar">الأمان</span></h3><p><span class="en">Healthcare data deserves the highest level of protection.</span><span class="ar">تستحقّ بيانات الرعاية الصحية أعلى مستويات الحماية.</span></p></div>
-      <div class="card"><h3><span class="en">Simplicity</span><span class="ar">البساطة</span></h3><p><span class="en">Complex workflows should feel effortless.</span><span class="ar">ينبغي أن تبدو الإجراءات المعقّدة سهلة وسلسة.</span></p></div>
-      <div class="card"><h3><span class="en">Excellence</span><span class="ar">التميّز</span></h3><p><span class="en">Every feature should improve the lives of healthcare professionals.</span><span class="ar">كل ميزة يجب أن تُحسّن حياة الكوادر الصحية.</span></p></div>
-      <div class="card"><h3><span class="en">Partnership</span><span class="ar">الشراكة</span></h3><p><span class="en">We build long-term relationships with healthcare organisations.</span><span class="ar">نبني علاقات طويلة الأمد مع المؤسسات الصحية.</span></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRODUCTS ============ -->
-<section class="section" id="products">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Products &amp; Solutions</span><span class="ar">المنتجات والحلول</span></p>
-    <h2><span class="en">One platform, a connected suite</span><span class="ar">منصّة واحدة، منظومة مترابطة</span></h2>
-    <p class="lead">
-      <span class="en">MDops is not one application, but a suite of connected products on one platform.</span>
-      <span class="ar">إم دي أوبس ليست تطبيقًا واحدًا، بل مجموعة منتجات مترابطة على منصّة واحدة.</span>
-    </p>
-    <div class="cards-grid cols-3 products">
-      <div class="card product"><span class="badge">OR</span><h3>MDops OR</h3><p><span class="en">Daily OR distribution — specialty-aware placement, slot locking, and a distribute-then-publish workflow.</span><span class="ar">توزيع يومي لغرف العمليات — إسناد يراعي التخصّص، وتثبيت الفترات، وسير عمل «وزّع ثم انشر».</span></p></div>
-      <div class="card product"><span class="badge">WF</span><h3>MDops Workforce</h3><p><span class="en">Monthly scheduling, leave and approvals, holiday handling, and working-hour compliance.</span><span class="ar">جدولة شهرية، وإجازات واعتمادات، وإدارة العطلات، والتزام بحدود ساعات العمل.</span></p></div>
-      <div class="card product"><span class="badge">OC</span><h3>MDops OnCall</h3><p><span class="en">On-call generation with fairness tracking and post-call rest.</span><span class="ar">توليد المناوبات مع تتبّع العدالة وراحة ما بعد المناوبة.</span></p></div>
-      <div class="card product"><span class="badge">AN</span><h3>MDops Analytics</h3><p><span class="en">An executive KPI centre — utilisation, staffing health, and fairness.</span><span class="ar">مركز مؤشرات أداء تنفيذي — الاستخدام، وصحة التوظيف، والعدالة.</span></p></div>
-      <div class="card product"><span class="badge">AI</span><h3>MDops AI</h3><p><span class="en">Fair, vacation-aware, rule-compliant scheduling in one click.</span><span class="ar">جدولة عادلة تراعي الإجازات وتلتزم بالقواعد — بنقرة واحدة.</span></p></div>
-      <div class="card product"><span class="badge">MB</span><h3>MDops Mobile</h3><p><span class="en">See assignments, request leave, and receive alerts anywhere.</span><span class="ar">اطّلع على التكليفات، واطلب الإجازات، وتلقَّ التنبيهات أينما كنت.</span></p></div>
-      <div class="card product"><span class="badge">CM</span><h3>MDops Command</h3><p><span class="en">The department's live status in one executive view.</span><span class="ar">الحالة اللحظية للقسم في شاشة تنفيذية واحدة.</span></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY MDOPS ============ -->
-<section class="section section-dark" id="why">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Why MDops</span><span class="ar">لماذا إم دي أوبس</span></p>
-    <h2><span class="en">Built for healthcare, not adapted to it</span><span class="ar">مبنيّة للقطاع الصحي، لا مُكيَّفة له</span></h2>
-    <ul class="why-list">
-      <li><strong><span class="en">Built for healthcare</span><span class="ar">مبنيّة للقطاع الصحي</span></strong><span class="en">Specialty, training level, and fatigue rules are first-class concepts.</span><span class="ar">التخصّص ومستوى التدريب وقواعد الإرهاق مفاهيم أساسية في المنصّة.</span></li>
-      <li><strong><span class="en">Fair by design</span><span class="ar">عادلة بالتصميم</span></strong><span class="en">Workload and on-call balanced transparently, with fairness visible to leadership.</span><span class="ar">يُوازَن العبء والمناوبات بشفافية، والعدالة ظاهرة للقيادة.</span></li>
-      <li><strong><span class="en">One source of truth</span><span class="ar">مصدر واحد للحقيقة</span></strong><span class="en">Scheduling, leave, on-call, analytics, and messaging in one system.</span><span class="ar">الجدولة والإجازات والمناوبات والتحليلات والمراسلات في نظام واحد.</span></li>
-      <li><strong><span class="en">Secure &amp; isolated</span><span class="ar">آمنة ومعزولة</span></strong><span class="en">Each organisation's data separated at the database level.</span><span class="ar">بيانات كل مؤسسة مفصولة على مستوى قاعدة البيانات.</span></li>
-      <li><strong><span class="en">Enterprise-ready</span><span class="ar">جاهزة للمؤسسات</span></strong><span class="en">Role-based access, two-factor sign-in, and approvals out of the box.</span><span class="ar">صلاحيات حسب الدور، ودخول بخطوتين، واعتمادات جاهزة.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ STORY ============ -->
-<section class="section" id="story">
-  <div class="container narrow">
-    <p class="eyebrow"><span class="en">Our Story</span><span class="ar">قصّتنا</span></p>
-    <h2><span class="en">It began at 11 p.m. on a Thursday</span><span class="ar">بدأ الأمر عند الحادية عشرة مساءً من يوم خميس</span></h2>
-    <p><span class="en">In a quiet hospital office lit by a single screen, a department coordinator was doing what they did every week: rebuilding the next month's rota by hand. A wall of names, a grid of days, and a tangle of rules held together by memory. One wrong cell and someone worked unfairly — or a room opened with no anaesthetist at all.</span><span class="ar">في مكتبٍ هادئ بمستشفى لا يُضيئه سوى شاشة واحدة، كان منسّق القسم يفعل ما يفعله كل أسبوع: يُعيد بناء جدول الشهر القادم يدويًّا. جدارٌ من الأسماء، وشبكةٌ من الأيام، وخيوطٌ متشابكة من القواعد تربطها الذاكرة وحدها. خطأٌ في خانة واحدة، فيعمل أحدهم بلا إنصاف — أو تُفتَح غرفة بلا طبيب تخدير على الإطلاق.</span></p>
-    <p><span class="en">We watched this happen — not once, but in department after department — and asked one simple question: why is the software that runs the operating room so much better than the software that runs the people in it?</span><span class="ar">رأينا هذا يتكرّر — لا مرّة واحدة، بل في قسمٍ تلو الآخر — فطرحنا سؤالًا واحدًا بسيطًا: لماذا تكون البرمجيات التي تُدير غرفة العمليات أفضل بكثير من تلك التي تُدير الناس داخلها؟</span></p>
-    <p class="story-highlight"><span class="en">That question became MDops.</span><span class="ar">من ذلك السؤال وُلدت إم دي أوبس.</span></p>
-    <p><span class="en">We started with the hardest part: fairly distributing anaesthesia staff across rooms, clinics, and on-call — respecting specialty, training level, leave, and fatigue rules that no spreadsheet could hold. When the first department went live and a full month's rota was generated — fair, complete, and explainable — in seconds instead of a weekend, we knew we had something.</span><span class="ar">بدأنا بالجزء الأصعب: توزيع كوادر التخدير بعدالة على الغرف والعيادات والمناوبات — مع مراعاة التخصّص، ومستوى التدريب، والإجازات، وقواعد الإرهاق التي يعجز أيّ جدول يدويّ عن استيعابها. وحين انطلق أول قسم، وتولّد جدول شهرٍ كامل — عادلٌ ومكتمل وقابل للتفسير — في ثوانٍ بدل عطلة نهاية أسبوع، أدركنا أننا نملك شيئًا مهمًّا.</span></p>
-    <p><span class="en">Today, MDops is a full operations platform — multi-tenant, secure, and built so every hospital runs in its own isolated environment. But the mission hasn't changed since that Thursday night: give healthcare teams software worthy of their work, so they can spend less time on administration and more with patients.</span><span class="ar">اليوم، إم دي أوبس منصّة عمليات متكاملة — متعدّدة المستأجرين، وآمنة، ومبنيّة بحيث يعمل كل مستشفى في بيئته المعزولة. لكن الرسالة لم تتغيّر منذ ليلة الخميس تلك: أن نمنح الفِرق الصحية برمجياتٍ تليق بعملها، لتقضي وقتًا أقل في الإدارة، وأكثر مع المرضى.</span></p>
-  </div>
-</section>
-
-<!-- ============ INDUSTRIES ============ -->
-<section class="section section-alt" id="industries">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Industries Served</span><span class="ar">القطاعات المخدومة</span></p>
-    <h2><span class="en">Wherever clinical staff must be scheduled fairly, safely, and at scale</span><span class="ar">أينما وجب جدولة الكوادر السريرية بعدالة وأمان وعلى نطاق واسع</span></h2>
-    <div class="chips">
-      <span class="chip"><span class="en">Private hospitals &amp; hospital groups</span><span class="ar">المستشفيات الخاصة والمجموعات الصحية</span></span>
-      <span class="chip"><span class="en">Government &amp; public-sector hospitals</span><span class="ar">المستشفيات الحكومية والقطاع العام</span></span>
-      <span class="chip"><span class="en">Military &amp; security-forces medical services</span><span class="ar">الخدمات الطبية العسكرية وقوى الأمن</span></span>
-      <span class="chip"><span class="en">Academic &amp; university medical centres</span><span class="ar">المراكز الطبية الأكاديمية والجامعية</span></span>
-      <span class="chip"><span class="en">Day-surgery &amp; ambulatory centres</span><span class="ar">مراكز جراحة اليوم الواحد والرعاية النهارية</span></span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PLATFORM & SECURITY ============ -->
-<section class="section" id="platform">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Technology Platform · Security &amp; Privacy</span><span class="ar">المنصّة التقنية · الأمن والخصوصية</span></p>
-    <h2><span class="en">Security is a design principle, not an afterthought</span><span class="ar">الأمن مبدأ تصميميّ، لا إضافة لاحقة</span></h2>
-    <div class="platform-grid">
-      <p class="lead">
-        <span class="en">MDops is a modern, cloud-native platform delivered as secure multi-tenant software: every hospital operates inside its own isolated data environment, reached through its own dedicated web address. Role-based access, an intelligent scheduling engine, and full English/Arabic support (with right-to-left layout) are built in, across web and mobile.</span>
-        <span class="ar">إم دي أوبس منصّة حديثة سحابية الأساس تُقدَّم كبرمجيات آمنة متعدّدة المستأجرين: يعمل كل مستشفى داخل بيئة بيانات معزولة خاصّة به، يصل إليها عبر عنوانٍ إلكترونيّ مخصّص. والصلاحيات حسب الدور، ومحرّك جدولة ذكيّ، ودعم كامل للعربية والإنجليزية (باتّجاه من اليمين إلى اليسار) — كلّها مضمَّنة، عبر الويب والجوال.</span>
-      </p>
-      <ul class="check-list">
-        <li><span class="en"><strong>Tenant isolation</strong> — data separated at the database level.</span><span class="ar"><strong>عزل المستأجرين</strong> — تُفصَل البيانات على مستوى قاعدة البيانات.</span></li>
-        <li><span class="en"><strong>Two-factor authentication</strong> — password plus a one-time code.</span><span class="ar"><strong>مصادقة بخطوتين</strong> — كلمة مرور مع رمز لمرة واحدة.</span></li>
-        <li><span class="en"><strong>Session integrity</strong> — sessions bound to their organisation, no cross-tenant replay.</span><span class="ar"><strong>سلامة الجلسات</strong> — جلسات مرتبطة بالمؤسسة تمنع إعادة الاستخدام عبر المستأجرين.</span></li>
-        <li><span class="en"><strong>Least-privilege access</strong> — role-based control over every action and view.</span><span class="ar"><strong>أقلّ امتياز</strong> — صلاحيات حسب الدور لكل إجراء وشاشة.</span></li>
-        <li><span class="en"><strong>Encryption in transit</strong> — with per-organisation file storage.</span><span class="ar"><strong>تشفير أثناء النقل</strong> — مع تخزين ملفّات لكل مؤسسة على حدة.</span></li>
-        <li><span class="en"><strong>Data residency options</strong> — a dedicated, region-specific database on request.</span><span class="ar"><strong>خيارات موقع البيانات</strong> — قاعدة بيانات مخصّصة حسب المنطقة عند الطلب.</span></li>
-      </ul>
-    </div>
-    <p class="pdpl-note">
-      <span class="en">Built to align with healthcare data-protection expectations, including Saudi PDPL and comparable international standards.</span>
-      <span class="ar">مصمّمة بما يتوافق مع متطلّبات حماية البيانات الصحية، بما في ذلك نظام حماية البيانات الشخصية السعودي (PDPL) والمعايير الدولية المماثلة.</span>
-    </p>
-  </div>
-</section>
-
-<!-- ============ IMPLEMENTATION ============ -->
-<section class="section section-alt" id="implementation">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Implementation Approach</span><span class="ar">منهجية التطبيق</span></p>
-    <h2><span class="en">Clear, low-risk phases</span><span class="ar">مراحل واضحة ومنخفضة المخاطر</span></h2>
-    <p class="lead">
-      <span class="en">We onboard hospitals in clear, low-risk phases so value arrives quickly with minimal disruption.</span>
-      <span class="ar">نُدخِل المستشفيات إلى المنصّة عبر مراحل واضحة ومنخفضة المخاطر، ليصل الأثر سريعًا وبأقلّ اضطراب.</span>
-    </p>
     <div class="journey" id="journey">
       <div class="journey-map">
         <svg class="journey-svg" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
@@ -267,32 +330,32 @@
 
       <div class="journey-cards">
         <article class="journey-card" data-step="0">
-          <span class="jc-step"><span class="en">Phase 1 of 6</span><span class="ar">المرحلة ١ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 1 of 6</span><span class="ar">المرحلة 1 من 6</span></span>
           <h3><span class="en">Discovery</span><span class="ar">الاستكشاف</span></h3>
           <p><span class="en">Understand departments, roles, locations, and rules.</span><span class="ar">فهم الأقسام والأدوار والمواقع والقواعد.</span></p>
         </article>
         <article class="journey-card" data-step="1">
-          <span class="jc-step"><span class="en">Phase 2 of 6</span><span class="ar">المرحلة ٢ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 2 of 6</span><span class="ar">المرحلة 2 من 6</span></span>
           <h3><span class="en">Provisioning</span><span class="ar">التهيئة</span></h3>
           <p><span class="en">A secure, isolated workspace is created.</span><span class="ar">إنشاء بيئة عمل آمنة ومعزولة.</span></p>
         </article>
         <article class="journey-card" data-step="2">
-          <span class="jc-step"><span class="en">Phase 3 of 6</span><span class="ar">المرحلة ٣ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 3 of 6</span><span class="ar">المرحلة 3 من 6</span></span>
           <h3><span class="en">Configuration</span><span class="ar">الإعداد</span></h3>
           <p><span class="en">Locations, categories, roles, and rules tailored to the hospital.</span><span class="ar">مواقع وفئات وأدوار وقواعد مصمَّمة للمستشفى.</span></p>
         </article>
         <article class="journey-card" data-step="3">
-          <span class="jc-step"><span class="en">Phase 4 of 6</span><span class="ar">المرحلة ٤ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 4 of 6</span><span class="ar">المرحلة 4 من 6</span></span>
           <h3><span class="en">Pilot</span><span class="ar">التجربة</span></h3>
           <p><span class="en">One department goes live and validates the workflow.</span><span class="ar">ينطلق قسم واحد ويتحقّق من سير العمل.</span></p>
         </article>
         <article class="journey-card" data-step="4">
-          <span class="jc-step"><span class="en">Phase 5 of 6</span><span class="ar">المرحلة ٥ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 5 of 6</span><span class="ar">المرحلة 5 من 6</span></span>
           <h3><span class="en">Rollout</span><span class="ar">التعميم</span></h3>
           <p><span class="en">Expand across departments with training and support.</span><span class="ar">التوسّع عبر الأقسام مع التدريب والدعم.</span></p>
         </article>
         <article class="journey-card" data-step="5">
-          <span class="jc-step"><span class="en">Phase 6 of 6</span><span class="ar">المرحلة ٦ من ٦</span></span>
+          <span class="jc-step tnum"><span class="en">Phase 6 of 6</span><span class="ar">المرحلة 6 من 6</span></span>
           <h3><span class="en">Optimisation</span><span class="ar">التحسين</span></h3>
           <p><span class="en">Review analytics, refine rules, improve outcomes.</span><span class="ar">مراجعة التحليلات، وصقل القواعد، وتحسين النتائج.</span></p>
         </article>
@@ -301,74 +364,88 @@
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
-<section class="section section-dark" id="contact">
-  <div class="container">
-    <p class="eyebrow"><span class="en">Contact Us</span><span class="ar">تواصل معنا</span></p>
-    <h2><span class="en">Let's talk about your operations</span><span class="ar">لنتحدّث عن عملياتكم</span></h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <p><span class="en">Every MDops relationship is a long-term partnership: guided onboarding, training for coordinators and leadership, responsive support, and a dedicated success contact — from first pilot to enterprise-wide operation.</span><span class="ar">كل علاقة مع إم دي أوبس شراكة طويلة الأمد: تهيئة موجَّهة، وتدريب للمنسّقين والقيادات، ودعم سريع الاستجابة، ومسؤول نجاح مخصّص — من أول تجربة إلى التشغيل على مستوى المؤسسة.</span></p>
-        <ul class="contact-lines">
-          <li><span class="ci-label"><span class="en">Company</span><span class="ar">الشركة</span></span> MDops — <span class="en">Intelligent Healthcare Operations</span><span class="ar">عمليات رعاية صحية ذكية</span></li>
-          <li><span class="ci-label"><span class="en">Headquarters</span><span class="ar">المقر الرئيسي</span></span> <span class="en">Riyadh, Kingdom of Saudi Arabia</span><span class="ar">الرياض، المملكة العربية السعودية</span></li>
-          <li><span class="ci-label"><span class="en">Email</span><span class="ar">البريد</span></span> <a href="mailto:falfawwaz@mdops.ai">falfawwaz@mdops.ai</a></li>
-          <li><span class="ci-label"><span class="en">Website</span><span class="ar">الموقع</span></span> <a href="https://mdops.ai">mdops.ai</a></li>
-        </ul>
+<!-- ================= EXECUTIVE MESSAGE ================= -->
+<section class="sec tint" id="message">
+  <div class="wrap">
+    <p class="eyebrow"><span class="en">Executive message</span><span class="ar">كلمة الإدارة</span></p>
+    <blockquote class="quote">
+      <p><span class="en">“Hospitals run on people, yet coordinating those people is still done with tools never built for it. Every hour spent rebuilding a rota by hand, every unfair on-call, every gap in an operating room is a cost paid in staff wellbeing and patient care. We built MDops to give healthcare teams software as capable and trustworthy as the clinical systems they already depend on.”</span><span class="ar">«تعمل المستشفيات بجهود البشر، ومع ذلك ما زال تنظيم هذه الجهود يتمّ بأدوات لم تُصنَع لهذا الغرض. كل ساعة تُنفَق في إعادة بناء جدول يدويًّا، وكل مناوبة غير عادلة، وكل فجوة في غرفة عمليات، ثمنٌ يُدفَع من عافية الكوادر ورعاية المرضى. بنينا إم دي أوبس لنمنح الفِرق الصحية برمجياتٍ لا تقلّ قدرةً وموثوقيةً عن الأنظمة السريرية التي تعتمد عليها.»</span></p>
+      <footer><span class="en">Reliability first. Security always. The MDops Team</span><span class="ar">الموثوقية أولًا، والأمان دائمًا. فريق إم دي أوبس</span></footer>
+    </blockquote>
+    <div class="vm">
+      <div>
+        <p class="col-label"><span class="en">Vision</span><span class="ar">الرؤية</span></p>
+        <p class="vm-text"><span class="en">To power the operations of every modern hospital.</span><span class="ar">أن نُشغّل العمليات في كل مستشفى حديث.</span></p>
       </div>
-
-      <form id="contactForm" class="contact-form" action="https://formsubmit.co/falfawwaz@mdops.ai" method="POST">
-        <input type="hidden" name="_subject" value="New inquiry from mdops.ai">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="form-row">
-          <label>
-            <span class="en">Full name</span><span class="ar">الاسم الكامل</span>
-            <input type="text" name="name" required data-ph-en="Your name" data-ph-ar="اسمك">
-          </label>
-          <label>
-            <span class="en">Work email</span><span class="ar">البريد الإلكتروني</span>
-            <input type="email" name="email" required data-ph-en="you@hospital.org" data-ph-ar="you@hospital.org">
-          </label>
-        </div>
-        <div class="form-row">
-          <label>
-            <span class="en">Organisation</span><span class="ar">المؤسسة</span>
-            <input type="text" name="organisation" data-ph-en="Hospital / organisation" data-ph-ar="المستشفى / المؤسسة">
-          </label>
-          <label>
-            <span class="en">Phone (optional)</span><span class="ar">الهاتف (اختياري)</span>
-            <input type="tel" name="phone" data-ph-en="+966 …" data-ph-ar="+966 …">
-          </label>
-        </div>
-        <label>
-          <span class="en">Message</span><span class="ar">الرسالة</span>
-          <textarea name="message" rows="5" required data-ph-en="Tell us about your departments and what you'd like to improve…" data-ph-ar="أخبرنا عن أقسامكم وما الذي تودّون تحسينه…"></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-          <span class="en">Send Message</span><span class="ar">إرسال الرسالة</span>
-        </button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-      </form>
+      <div>
+        <p class="col-label"><span class="en">Mission</span><span class="ar">الرسالة</span></p>
+        <p class="vm-text"><span class="en">To make healthcare operations effortless, helping hospitals work more efficiently, decide with confidence, and give more of their time back to patients.</span><span class="ar">أن نجعل عمليات الرعاية الصحية سلسة، لتعمل المستشفيات بكفاءة أعلى، وتتّخذ قراراتها بثقة، وتُعيد المزيد من وقتها لخدمة المرضى.</span></p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="logo">
-      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="4"  y="18" width="6" height="10" rx="2" fill="#22D3EE"/>
-        <rect x="13" y="11" width="6" height="17" rx="2" fill="#2563EB"/>
-        <rect x="22" y="4"  width="6" height="24" rx="2" fill="#10B981"/>
-      </svg>
-      <span class="logo-word">MD<span class="logo-o">o</span>ps</span>
+<!-- ================= CONTACT ================= -->
+<section class="sec dark" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow"><span class="en">Contact</span><span class="ar">تواصل معنا</span></p>
+      <h2><span class="en">Let's talk about your operations.</span><span class="ar">لنتحدّث عن عملياتكم.</span></h2>
+      <p class="lead"><span class="en">Every MDops relationship is a long-term partnership: guided onboarding, training for coordinators and leadership, responsive support, and a dedicated success contact from first pilot to enterprise-wide operation.</span><span class="ar">كل علاقة مع إم دي أوبس شراكة طويلة الأمد: تهيئة موجَّهة، وتدريب للمنسّقين والقيادات، ودعم سريع الاستجابة، ومسؤول نجاح مخصّص من أول تجربة إلى التشغيل على مستوى المؤسسة.</span></p>
+      <dl class="facts">
+        <div><dt><span class="en">Email</span><span class="ar">البريد</span></dt><dd><span class="mono-sel" id="contactEmail">falfawwaz@mdops.ai</span> <button type="button" class="copy" id="copyEmail"><span class="en">Copy</span><span class="ar">نسخ</span></button></dd></div>
+        <div><dt><span class="en">Headquarters</span><span class="ar">المقر الرئيسي</span></dt><dd><span class="en">Riyadh, Kingdom of Saudi Arabia</span><span class="ar">الرياض، المملكة العربية السعودية</span></dd></div>
+        <div><dt><span class="en">Category</span><span class="ar">التصنيف</span></dt><dd><span class="en">Enterprise Healthcare Operations (HealthTech SaaS)</span><span class="ar">عمليات رعاية صحية مؤسسية (HealthTech SaaS)</span></dd></div>
+        <div><dt><span class="en">Delivery</span><span class="ar">التقديم</span></dt><dd><span class="en">Secure multi-tenant cloud, isolated per organisation</span><span class="ar">سحابة آمنة متعدّدة المستأجرين، معزولة لكل مؤسسة</span></dd></div>
+        <div><dt><span class="en">Website</span><span class="ar">الموقع</span></dt><dd><a href="https://mdops.ai">mdops.ai</a></dd></div>
+      </dl>
     </div>
-    <p><span class="en">Intelligent Healthcare Operations</span><span class="ar">عمليات رعاية صحية ذكية</span></p>
-    <p class="copyright">© 2026 MDops · <span class="en">Riyadh, Kingdom of Saudi Arabia</span><span class="ar">الرياض، المملكة العربية السعودية</span> · <a href="mailto:falfawwaz@mdops.ai">falfawwaz@mdops.ai</a></p>
+
+    <form id="contactForm" class="form" novalidate>
+      <input type="text" name="_honey" id="f-honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-row">
+        <label for="f-name"><span class="en">Full name</span><span class="ar">الاسم الكامل</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <label for="f-email"><span class="en">Work email</span><span class="ar">البريد الإلكتروني للعمل</span></label>
+        <input type="email" id="f-email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-pair">
+        <div class="form-row">
+          <label for="f-org"><span class="en">Hospital or organisation</span><span class="ar">المستشفى أو المؤسسة</span></label>
+          <input type="text" id="f-org" name="organisation" autocomplete="organization">
+        </div>
+        <div class="form-row">
+          <label for="f-phone"><span class="en">Phone (optional)</span><span class="ar">الهاتف (اختياري)</span></label>
+          <input type="tel" id="f-phone" name="phone" autocomplete="tel" dir="ltr">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="f-msg"><span class="en">What would you like to improve?</span><span class="ar">ما الذي تودّون تحسينه؟</span></label>
+        <textarea id="f-msg" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-signal" id="submitBtn"><span class="en">Send message</span><span class="ar">إرسال الرسالة</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-mark" aria-hidden="true">
+    <canvas class="ecg" id="ecgFooter"></canvas>
+    <span class="giant">MD<span class="pulse-o">o</span>ps</span>
+  </div>
+  <div class="wrap footer-row">
+    <span><span class="en">Intelligent Healthcare Operations</span><span class="ar">عمليات رعاية صحية ذكية</span></span>
+    <span><span class="en">Riyadh, Kingdom of Saudi Arabia</span><span class="ar">الرياض، المملكة العربية السعودية</span></span>
+    <span>mdops.ai · falfawwaz@mdops.ai</span>
+    <span class="tnum">© 2026 MDops</span>
   </div>
 </footer>
 

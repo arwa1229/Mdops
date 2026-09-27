@@ -112,25 +112,21 @@
     <div class="story-grid">
       <div class="story-steps">
         <article class="step is-active" data-state="manual">
-          <p class="step-time tnum"><span class="en">Thu · 23:00</span><span class="ar">الخميس · 23:00</span></p>
-          <p><span class="en">In a quiet hospital office lit by a single screen, the department's coordinator was doing what they did every week: rebuilding the next month's rota by hand. A wall of names, a grid of days, and a tangle of rules held together by memory. Who was on leave. Who had done three nights in a row. Which resident couldn't cover the women's OR. One wrong cell and someone worked unfairly, or a room opened with no anaesthetist at all.</span><span class="ar">في مكتبٍ هادئ بمستشفى لا يُضيئه سوى شاشة واحدة، كان منسّق القسم يفعل ما يفعله كل أسبوع: يُعيد بناء جدول الشهر القادم يدويًّا. جدارٌ من الأسماء، وشبكةٌ من الأيام، وخيوطٌ متشابكة من القواعد تربطها الذاكرة وحدها. مَن في إجازة؟ مَن أدّى ثلاث ليالٍ متتالية؟ أيّ مقيمٍ لا يستطيع تغطية غرفة عمليات النساء؟ خطأٌ في خانة واحدة، فيعمل أحدهم بلا إنصاف، أو تُفتَح غرفة بلا طبيب تخدير على الإطلاق.</span></p>
+          <p class="step-time tnum"><span class="en">The problem · Thu 23:00</span><span class="ar">المشكلة · الخميس 23:00</span></p>
+          <p><span class="en">Hospitals still build staff rotas by hand. Coordinators juggle leave, fatigue rules, and specialty cover from memory, and a single error means unfair shifts or an operating room without an anaesthetist.</span><span class="ar">ما زالت المستشفيات تبني جداول الكوادر يدويًّا. يوازن المنسّقون من الذاكرة بين الإجازات وقواعد الإرهاق وتغطية التخصّصات، وخطأ واحد يعني مناوبات غير عادلة أو غرفة عمليات بلا طبيب تخدير.</span></p>
         </article>
         <article class="step" data-state="noon">
-          <p class="step-time tnum"><span class="en">Fri · 12:00</span><span class="ar">الجمعة · 12:00</span></p>
-          <p><span class="en">By morning the schedule was done. By noon it was already wrong: a sick call, a swapped shift, a cancelled list. And the coordinator started again.</span><span class="ar">بحلول الصباح اكتمل الجدول. وبحلول الظهر صار خاطئًا: اتّصال مرضيّ، ومناوبة مُبادَلة، وقائمة مُلغاة. فيبدأ المنسّق من جديد.</span></p>
+          <p class="step-time tnum"><span class="en">The cost · Fri 12:00</span><span class="ar">التكلفة · الجمعة 12:00</span></p>
+          <p><span class="en">By noon the rota is out of date: a sick call, a swapped shift, a cancelled list. The work starts again every week, costing staff wellbeing and patient time.</span><span class="ar">بحلول الظهر يصبح الجدول قديمًا: اتّصال مرضيّ، ومناوبة مُبادَلة، وقائمة مُلغاة. ويبدأ العمل من جديد كل أسبوع، على حساب عافية الكوادر ووقت المرضى.</span></p>
         </article>
         <article class="step" data-state="noon">
           <p class="step-time"><span class="en">The question</span><span class="ar">السؤال</span></p>
-          <p><span class="en">We watched this happen in department after department, and asked one simple question: why is the software that runs the operating room so much better than the software that runs the people in it?</span><span class="ar">رأينا هذا يتكرّر في قسمٍ تلو الآخر، فطرحنا سؤالًا واحدًا بسيطًا: لماذا تكون البرمجيات التي تُدير غرفة العمليات أفضل بكثير من تلك التي تُدير الناس داخلها؟</span></p>
+          <p><span class="en">Why is the software that runs the operating room so much better than the software that runs the people in it?</span><span class="ar">لماذا تكون البرمجيات التي تُدير غرفة العمليات أفضل بكثير من تلك التي تُدير الناس داخلها؟</span></p>
           <p class="step-punch"><span class="en">That question became MDops.</span><span class="ar">من ذلك السؤال وُلدت إم دي أوبس.</span></p>
         </article>
         <article class="step" data-state="mdops">
-          <p class="step-time"><span class="en">Day one</span><span class="ar">اليوم الأول</span></p>
-          <p><span class="en">We started with the hardest part: fairly distributing anaesthesia staff across rooms, clinics, and on-call, respecting specialty, training level, leave, and fatigue rules that no spreadsheet could hold. When the first department went live and a full month's rota was generated in seconds instead of a weekend, fair, complete, and explainable, we knew we had something.</span><span class="ar">بدأنا بالجزء الأصعب: توزيع كوادر التخدير بعدالة على الغرف والعيادات والمناوبات، مع مراعاة التخصّص، ومستوى التدريب، والإجازات، وقواعد الإرهاق التي يعجز أيّ جدول يدويّ عن استيعابها. وحين انطلق أول قسم، وتولّد جدول شهرٍ كامل عادلٌ ومكتمل وقابل للتفسير في ثوانٍ بدل عطلة نهاية أسبوع، أدركنا أننا نملك شيئًا مهمًّا.</span></p>
-        </article>
-        <article class="step" data-state="mdops">
-          <p class="step-time"><span class="en">Today</span><span class="ar">اليوم</span></p>
-          <p><span class="en">MDops is now a full operations platform: multi-tenant, secure, and built so every hospital runs in its own isolated environment. The mission hasn't changed since that Thursday night. Give healthcare teams software worthy of their work, so they spend less time on administration and more with patients.</span><span class="ar">اليوم، إم دي أوبس منصّة عمليات متكاملة: متعدّدة المستأجرين، وآمنة، ومبنيّة بحيث يعمل كل مستشفى في بيئته المعزولة. لكن الرسالة لم تتغيّر منذ ليلة الخميس تلك: أن نمنح الفِرق الصحية برمجياتٍ تليق بعملها، لتقضي وقتًا أقل في الإدارة، وأكثر مع المرضى.</span></p>
+          <p class="step-time"><span class="en">The result · Today</span><span class="ar">النتيجة · اليوم</span></p>
+          <p><span class="en">A full month's rota, fair, complete, and explainable, now takes seconds instead of a weekend. MDops runs as a secure platform where every hospital has its own isolated environment.</span><span class="ar">جدول شهرٍ كامل، عادلٌ ومكتمل وقابل للتفسير، يُنجَز الآن في ثوانٍ بدل عطلة نهاية أسبوع. وتعمل إم دي أوبس منصّةً آمنة يملك فيها كل مستشفى بيئته المعزولة.</span></p>
         </article>
       </div>
 

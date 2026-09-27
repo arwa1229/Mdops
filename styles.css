@@ -336,8 +336,8 @@ html[dir="rtl"] .b-block { transform-origin: right center; }
   display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(40px, 6vw, 88px); margin-top: clamp(40px, 5vw, 64px); align-items: start;
 }
-.story-steps { display: grid; gap: clamp(56px, 12vh, 140px); padding-bottom: 12vh; }
-.step { max-width: 52ch; color: var(--ink-soft); transition: color .4s; }
+.story-steps { display: grid; gap: clamp(72px, 18vh, 200px); padding-block: 4vh 16vh; }
+.step { max-width: 46ch; color: var(--ink-soft); transition: color .4s; font-size: 19px; line-height: 1.6; }
 .step.is-active { color: var(--ink); }
 .step p + p { margin-top: 14px; }
 .step-time {

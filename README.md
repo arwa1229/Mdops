@@ -16,7 +16,25 @@ Official website for **MDops — Intelligent Healthcare Operations** (عمليا
 
 The website itself is just four files: `index.html`, `styles.css`, `script.js`, and `assets/favicon.svg`. There is no build step.
 
-## Hosting on GoDaddy (mdops.ai)
+## Hosting (free): GitHub Pages + GoDaddy DNS
+
+This is the same setup as Smart Recipe (smartrecipe.co): GitHub hosts the files for free, and the domain stays at GoDaddy.
+
+**1. Turn on GitHub Pages** (repo **Settings → Pages**):
+- Source: **Deploy from a branch**
+- Branch: the branch that holds the site (currently `claude/google-workspace-business-email-28e7cd`, or `main` once merged), folder **/ (root)** → **Save**
+- Custom domain: `mdops.ai` (the `CNAME` file in the repo sets this) → once the certificate is ready, tick **Enforce HTTPS**
+
+**2. Point the domain at GitHub** (GoDaddy → Domain Portfolio → mdops.ai → **DNS**):
+- Delete any existing **A** record with Name `@` (GoDaddy's parking/website address)
+- Add four **A** records, Name `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- Edit (or add) the **CNAME** record Name `www` → Value `arwa1229.github.io`
+
+> **Do not touch the email records:** MX `smtp.google.com`, the `google-site-verification` TXT record, and the `google._domainkey` TXT record must stay exactly as they are.
+
+`.nojekyll` tells GitHub Pages to serve the files as-is.
+
+## Alternative: paid GoDaddy Web Hosting (cPanel)
 
 **Plan required:** a GoDaddy **Web Hosting** plan (cPanel, e.g. Economy). GoDaddy's *Website Builder* / *Websites + Marketing* product cannot host custom HTML files, so it will not work for this site.
 

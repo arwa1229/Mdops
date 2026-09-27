@@ -251,14 +251,53 @@
       <span class="en">We onboard hospitals in clear, low-risk phases so value arrives quickly with minimal disruption.</span>
       <span class="ar">نُدخِل المستشفيات إلى المنصّة عبر مراحل واضحة ومنخفضة المخاطر، ليصل الأثر سريعًا وبأقلّ اضطراب.</span>
     </p>
-    <ol class="steps">
-      <li><h3><span class="en">Discovery</span><span class="ar">الاستكشاف</span></h3><p><span class="en">Understand departments, roles, locations, and rules.</span><span class="ar">فهم الأقسام والأدوار والمواقع والقواعد.</span></p></li>
-      <li><h3><span class="en">Provisioning</span><span class="ar">التهيئة</span></h3><p><span class="en">A secure, isolated workspace is created.</span><span class="ar">إنشاء بيئة عمل آمنة ومعزولة.</span></p></li>
-      <li><h3><span class="en">Configuration</span><span class="ar">الإعداد</span></h3><p><span class="en">Locations, categories, roles, and rules tailored to the hospital.</span><span class="ar">مواقع وفئات وأدوار وقواعد مصمَّمة للمستشفى.</span></p></li>
-      <li><h3><span class="en">Pilot</span><span class="ar">التجربة</span></h3><p><span class="en">One department goes live and validates the workflow.</span><span class="ar">ينطلق قسم واحد ويتحقّق من سير العمل.</span></p></li>
-      <li><h3><span class="en">Rollout</span><span class="ar">التعميم</span></h3><p><span class="en">Expand across departments with training and support.</span><span class="ar">التوسّع عبر الأقسام مع التدريب والدعم.</span></p></li>
-      <li><h3><span class="en">Optimisation</span><span class="ar">التحسين</span></h3><p><span class="en">Review analytics, refine rules, improve outcomes.</span><span class="ar">مراجعة التحليلات، وصقل القواعد، وتحسين النتائج.</span></p></li>
-    </ol>
+    <div class="journey" id="journey">
+      <div class="journey-map">
+        <svg class="journey-svg" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+          <path id="journeyPath" class="journey-track" d="M 30 235 C 110 100 190 75 285 110 C 385 147 425 230 515 238 C 605 246 655 150 735 110 C 815 70 905 75 970 62"/>
+          <path id="journeyProgress" class="journey-prog" d="M 30 235 C 110 100 190 75 285 110 C 385 147 425 230 515 238 C 605 246 655 150 735 110 C 815 70 905 75 970 62"/>
+        </svg>
+        <button type="button" class="journey-node" data-step="0"><span class="jn-dot">1</span><span class="jn-label"><span class="en">Discovery</span><span class="ar">الاستكشاف</span></span></button>
+        <button type="button" class="journey-node" data-step="1"><span class="jn-dot">2</span><span class="jn-label"><span class="en">Provisioning</span><span class="ar">التهيئة</span></span></button>
+        <button type="button" class="journey-node" data-step="2"><span class="jn-dot">3</span><span class="jn-label"><span class="en">Configuration</span><span class="ar">الإعداد</span></span></button>
+        <button type="button" class="journey-node" data-step="3"><span class="jn-dot">4</span><span class="jn-label"><span class="en">Pilot</span><span class="ar">التجربة</span></span></button>
+        <button type="button" class="journey-node" data-step="4"><span class="jn-dot">5</span><span class="jn-label"><span class="en">Rollout</span><span class="ar">التعميم</span></span></button>
+        <button type="button" class="journey-node" data-step="5"><span class="jn-dot">6</span><span class="jn-label"><span class="en">Optimisation</span><span class="ar">التحسين</span></span></button>
+      </div>
+
+      <div class="journey-cards">
+        <article class="journey-card" data-step="0">
+          <span class="jc-step"><span class="en">Phase 1 of 6</span><span class="ar">المرحلة ١ من ٦</span></span>
+          <h3><span class="en">Discovery</span><span class="ar">الاستكشاف</span></h3>
+          <p><span class="en">Understand departments, roles, locations, and rules.</span><span class="ar">فهم الأقسام والأدوار والمواقع والقواعد.</span></p>
+        </article>
+        <article class="journey-card" data-step="1">
+          <span class="jc-step"><span class="en">Phase 2 of 6</span><span class="ar">المرحلة ٢ من ٦</span></span>
+          <h3><span class="en">Provisioning</span><span class="ar">التهيئة</span></h3>
+          <p><span class="en">A secure, isolated workspace is created.</span><span class="ar">إنشاء بيئة عمل آمنة ومعزولة.</span></p>
+        </article>
+        <article class="journey-card" data-step="2">
+          <span class="jc-step"><span class="en">Phase 3 of 6</span><span class="ar">المرحلة ٣ من ٦</span></span>
+          <h3><span class="en">Configuration</span><span class="ar">الإعداد</span></h3>
+          <p><span class="en">Locations, categories, roles, and rules tailored to the hospital.</span><span class="ar">مواقع وفئات وأدوار وقواعد مصمَّمة للمستشفى.</span></p>
+        </article>
+        <article class="journey-card" data-step="3">
+          <span class="jc-step"><span class="en">Phase 4 of 6</span><span class="ar">المرحلة ٤ من ٦</span></span>
+          <h3><span class="en">Pilot</span><span class="ar">التجربة</span></h3>
+          <p><span class="en">One department goes live and validates the workflow.</span><span class="ar">ينطلق قسم واحد ويتحقّق من سير العمل.</span></p>
+        </article>
+        <article class="journey-card" data-step="4">
+          <span class="jc-step"><span class="en">Phase 5 of 6</span><span class="ar">المرحلة ٥ من ٦</span></span>
+          <h3><span class="en">Rollout</span><span class="ar">التعميم</span></h3>
+          <p><span class="en">Expand across departments with training and support.</span><span class="ar">التوسّع عبر الأقسام مع التدريب والدعم.</span></p>
+        </article>
+        <article class="journey-card" data-step="5">
+          <span class="jc-step"><span class="en">Phase 6 of 6</span><span class="ar">المرحلة ٦ من ٦</span></span>
+          <h3><span class="en">Optimisation</span><span class="ar">التحسين</span></h3>
+          <p><span class="en">Review analytics, refine rules, improve outcomes.</span><span class="ar">مراجعة التحليلات، وصقل القواعد، وتحسين النتائج.</span></p>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 

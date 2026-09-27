@@ -215,21 +215,73 @@ html[data-lang="ar"] .vm-card h3 { letter-spacing: 0; }
   background: rgba(16, 185, 129, 0.07); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--navy);
 }
 
-/* Steps */
-.steps { list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.steps li {
-  counter-increment: step;
+/* Implementation journey map */
+.journey-map {
+  position: relative;
+  aspect-ratio: 1000 / 300;
+  margin: 44px 0 18px;
+}
+.journey-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+html[dir="rtl"] .journey-svg { transform: scaleX(-1); }
+.journey-track {
+  fill: none; stroke: #C3CEDD; stroke-width: 3;
+  stroke-dasharray: 2 9; stroke-linecap: round;
+}
+.journey-prog {
+  fill: none; stroke: var(--emerald); stroke-width: 4; stroke-linecap: round;
+  filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.45));
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.journey-node {
+  position: absolute; transform: translate(-50%, -50%);
+  background: none; border: 0; cursor: pointer; z-index: 2;
+  display: grid; justify-items: center; gap: 7px;
+  font-family: inherit; padding: 0;
+}
+html[dir="rtl"] .journey-node { transform: translate(50%, -50%); }
+.jn-dot {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: #fff; border: 2.5px solid #C3CEDD; color: var(--muted);
+  font-weight: 800; font-size: 1.05rem;
+  display: grid; place-items: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, background 0.25s, border-color 0.25s, color 0.25s, box-shadow 0.25s;
+}
+.journey-node:hover .jn-dot { transform: scale(1.08); border-color: var(--blue); color: var(--blue); }
+.journey-node.done .jn-dot { border-color: var(--emerald); color: var(--emerald); }
+.journey-node.active .jn-dot {
+  background: var(--navy); border-color: var(--emerald); color: var(--cyan);
+  transform: scale(1.18);
+  box-shadow: 0 0 0 9px rgba(16, 185, 129, 0.16), 0 10px 24px rgba(11, 31, 58, 0.35);
+  animation: nodeGlow 2.2s ease-in-out infinite;
+}
+@keyframes nodeGlow {
+  0%, 100% { box-shadow: 0 0 0 9px rgba(16, 185, 129, 0.16), 0 10px 24px rgba(11, 31, 58, 0.35); }
+  50%      { box-shadow: 0 0 0 14px rgba(16, 185, 129, 0.07), 0 10px 24px rgba(11, 31, 58, 0.35); }
+}
+.jn-label {
+  font-size: 0.8rem; font-weight: 700; color: var(--navy); white-space: nowrap;
+  background: #fff; border: 1px solid var(--line); border-radius: 999px;
+  padding: 4px 12px; transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.journey-node.active .jn-label { background: var(--navy); border-color: var(--navy); color: #fff; }
+.journey-cards { position: relative; min-height: 185px; }
+.journey-card {
+  position: absolute; inset: 0;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 24px; box-shadow: var(--shadow); position: relative;
+  border-inline-start: 4px solid var(--emerald);
+  padding: 26px 30px; box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(14px); pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s;
 }
-.steps li::before {
-  content: counter(step);
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 50%; margin-bottom: 12px;
-  background: var(--navy); color: var(--cyan); font-weight: 800;
+.journey-card.active { opacity: 1; transform: none; pointer-events: auto; }
+.jc-step {
+  display: inline-block; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--emerald); margin-bottom: 10px;
 }
-.steps h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 6px; }
-.steps p { color: var(--muted); font-size: 0.92rem; }
+html[data-lang="ar"] .jc-step { letter-spacing: 0; }
+.journey-card h3 { color: var(--navy); font-size: 1.25rem; margin-bottom: 8px; }
+.journey-card p { color: var(--muted); font-size: 1rem; max-width: 62ch; }
 
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; margin-top: 14px; }
@@ -272,11 +324,34 @@ html[data-lang="ar"] .ci-label { letter-spacing: 0; }
 /* ===== Responsive ===== */
 @media (max-width: 920px) {
   .hero-grid, .about-grid, .platform-grid, .contact-grid { grid-template-columns: 1fr; }
-  .cols-3, .steps { grid-template-columns: repeat(2, 1fr); }
+  .cols-3 { grid-template-columns: repeat(2, 1fr); }
   .hero { padding: 64px 0 76px; }
+  .jn-label { display: none; }
+  .jn-dot { width: 38px; height: 38px; font-size: 0.95rem; }
+}
+@media (max-width: 720px) {
+  /* journey map becomes a vertical timeline on small screens */
+  .journey-map { display: none; }
+  .journey-cards { min-height: 0; display: grid; gap: 0; }
+  .journey-card {
+    position: relative; inset: auto; opacity: 1; transform: none; pointer-events: auto;
+    margin-inline-start: 26px; margin-bottom: 18px;
+  }
+  .journey-card::before {
+    content: attr(data-num);
+    position: absolute; inset-inline-start: -40px; top: 24px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--navy); color: var(--cyan);
+    font-weight: 800; font-size: 0.85rem;
+    display: grid; place-items: center;
+  }
+  .journey-card:not(:last-child)::after {
+    content: ""; position: absolute; inset-inline-start: -26px; top: 60px; bottom: -42px;
+    width: 2px; background: repeating-linear-gradient(to bottom, #C3CEDD 0 5px, transparent 5px 11px);
+  }
 }
 @media (max-width: 640px) {
-  .cols-3, .steps, .form-row, .vm-cards { grid-template-columns: 1fr; }
+  .cols-3, .form-row, .vm-cards { grid-template-columns: 1fr; }
   .nav-toggle { display: block; }
   .nav-links {
     position: absolute; top: 68px; inset-inline: 0;

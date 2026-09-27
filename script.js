@@ -36,6 +36,60 @@ navLinks.addEventListener('click', function (e) {
   if (e.target.closest('a')) navLinks.classList.remove('open');
 });
 
+/* ===== Implementation journey map ===== */
+(function initJourney() {
+  const path = document.getElementById('journeyPath');
+  if (!path) return;
+  const progress = document.getElementById('journeyProgress');
+  const nodes = Array.prototype.slice.call(document.querySelectorAll('.journey-node'));
+  const cards = Array.prototype.slice.call(document.querySelectorAll('.journey-card'));
+  const total = path.getTotalLength();
+  const VBW = 1000, VBH = 300;
+  // node anchor points as fractions along the path
+  const fractions = [0.02, 0.21, 0.40, 0.60, 0.79, 0.98];
+
+  progress.style.strokeDasharray = total;
+  progress.style.strokeDashoffset = total;
+
+  nodes.forEach(function (node, i) {
+    const pt = path.getPointAtLength(total * fractions[i]);
+    node.style.insetInlineStart = (pt.x / VBW * 100) + '%';
+    node.style.top = (pt.y / VBH * 100) + '%';
+  });
+  cards.forEach(function (card, i) { card.dataset.num = i + 1; });
+
+  let active = -1;
+  let timer = null;
+
+  function setActive(i) {
+    if (i === active) return;
+    active = i;
+    nodes.forEach(function (n, k) {
+      n.classList.toggle('done', k < i);
+      n.classList.toggle('active', k === i);
+    });
+    cards.forEach(function (c, k) { c.classList.toggle('active', k === i); });
+    progress.style.strokeDashoffset = total * (1 - fractions[i]);
+  }
+
+  function stopAuto() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+
+  nodes.forEach(function (node, i) {
+    node.addEventListener('click', function () { stopAuto(); setActive(i); });
+  });
+
+  setActive(0);
+
+  // gently auto-advance through the phases until the visitor interacts
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion) {
+    timer = setInterval(function () { setActive((active + 1) % nodes.length); }, 3200);
+    document.getElementById('journey').addEventListener('pointerdown', stopAuto, { once: true });
+  }
+})();
+
 /* ===== Contact form -> falfawwaz@mdops.ai via FormSubmit ===== */
 const form = document.getElementById('contactForm');
 const statusEl = document.getElementById('formStatus');

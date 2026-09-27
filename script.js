@@ -590,23 +590,6 @@
     }
   })();
 
-  /* ================= Copy email ================= */
-  $('copyEmail').addEventListener('click', function () {
-    var btn = this, emailEl = $('contactEmail');
-    function done() {
-      var prev = btn.innerHTML;
-      btn.innerHTML = T('Copied', 'تم النسخ');
-      setTimeout(function () { btn.innerHTML = prev; }, 1600);
-    }
-    function selectText() {
-      var r = document.createRange(); r.selectNodeContents(emailEl);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-    }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(emailEl.textContent).then(done, selectText);
-    } else { selectText(); }
-  });
-
   /* ================= Contact form -> falfawwaz@mdops.ai (FormSubmit) ================= */
   var form = $('contactForm'), statusMsg = $('formStatus'), submitBtn = $('submitBtn');
   var MSG = {
